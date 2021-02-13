@@ -16,4 +16,3 @@ public getDiscription(ticker:string):string{
     }
 }
 }
-  
