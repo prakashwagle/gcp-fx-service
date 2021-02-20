@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/git'
+  args:
+  - clone
+  - '--depth'
+  - '1'
+  - https://github.com/dnstanciu/drf-angular-docker-tutorial.git
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/gcp-batman/fx-app:v1', '.']
+
+# Publish the image to Container Registry.
+images: ['gcr.io/gcp-batman/fx-app:v1']
