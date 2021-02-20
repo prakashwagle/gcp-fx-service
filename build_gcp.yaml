@@ -4,7 +4,7 @@ steps:
   - clone
   - '--depth'
   - '1'
-  - https://github.com/dnstanciu/drf-angular-docker-tutorial.git
+  - https://github.com/prakashwagle/gcp-fx-service.git
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/gcp-batman/fx-app:v1', '.']
